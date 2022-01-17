@@ -1,34 +1,55 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# tailwind elements next-js example
 
-## Getting Started
+## Create a new Next.js project
 
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
+```sh
+npm create-next-app ProjectName
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## install tw-elements
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+npm install tw-elements
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+```sh
+npm install tw-elements
+```
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## Enable tw-elements
 
-## Learn More
+Tailwind uses some client-side objects (window,document) to handle events. On the other hand, Next.js renders the app both server-side and client-side. There is no window, document on the server side, so you may see some error messages like the following:
 
-To learn more about Next.js, take a look at the following resources:
+```js
+document is not defined
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+To avoid the mentioned error, we need to make sure that the window and document objects are only used on the client side. This can be done with the useEffect hook:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+```js
+// Place this in the pages/_app.js file
+useEffect(() => {
+    import("tw-elements");
+  }, []);
+```
 
-## Deploy on Vercel
+## Use this example
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+clone this repository
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+```sh
+git clone https://github.com/knasan/tailwind-elements-nextjs-example
+```
+
+and run npm install and npm run dev
+
+```sh
+cd tailwind-elements-nextjs-example
+```
+
+```sh
+npm install && npm run dev
+```
+
+## Important files in this example
+
+pages/__app.js
+pages/index.js
