@@ -1,4 +1,4 @@
-import MessagePage from "../components/tailwindmsg"
+import MessagePage from "../components/tailwindplugin"
 export default function TimepickerPage() {
     return (
         <div>
