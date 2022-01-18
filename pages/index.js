@@ -1,5 +1,3 @@
-import "tw-elements/dist/css/index.min.css"
-
 export default function Home() {
   return (
     <div>
