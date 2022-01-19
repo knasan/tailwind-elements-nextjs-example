@@ -6,6 +6,8 @@
 npm create-next-app ProjectName
 ```
 
+Set up tailwind css as described here [tailwind](https://tailwindcss.com/docs/guides/nextjs) and here [postcss](https://tailwindcss.com/docs/installation/using-postcss)
+
 ## install tw-elements
 
 npm install tw-elements
@@ -31,6 +33,10 @@ useEffect(() => {
   }, []);
 ```
 
+## non-functioning components
+
+The examples were taken from [tailwind-elements.com](https://tailwind-elements.com/quick-start/) and adapted for Next.js. I wanted to know how well it works. Unfortunately, the library doesn't seem quite right to me. The JS are sometimes broken and somehow not recognized by default, although they were specified in the plugin (tailwind.config.js). You have to use tricks to make it work and sometimes things break as a result. That's why I thought to myself, what I've done, I've done, but I'm not going to go further with the example. The "_app.js" file and even a separate "_document.js" had to be created. To be fair, there is no documentation for nextjs by Tailwind-Elements. Only for React and Vue. So it can't be compatible. That's what I wanted to find out with this project. It doesn't appear to be 100% compatible and I wouldn't use it in a production project.
+
 ## Use this example
 
 clone this repository
@@ -51,5 +57,9 @@ npm install && npm run dev
 
 ## Important files in this example
 
-pages/__app.js
-pages/index.js
+- pages/__app.js
+- pages/_document.js
+
+and all pages/ (components name)
+
+If I misinterpreted something or do you have a better way? Fork my repository and make a push request, I'll be happy to edit it.
