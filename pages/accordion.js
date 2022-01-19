@@ -1,6 +1,7 @@
+import Layout from "../components/Layout"
 export default function AccordionPage() {
     return (
-        <div>
+        <Layout>
             <div className="accordion" id="accordionExample">
                 <div className="accordion-item bg-white border border-gray-200">
                     <h2 className="accordion-header mb-0" id="headingOne">
@@ -87,6 +88,6 @@ export default function AccordionPage() {
                     </div>
                 </div>
             </div>
-        </div>
+        </Layout>
     )
 }

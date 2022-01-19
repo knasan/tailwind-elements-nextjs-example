@@ -1,11 +1,14 @@
+import Image from "next/image"
+import Layout from "../components/Layout"
+
 export default function ChipsPage() {
     return (
-        <div>
+        <Layout>
             <div className="flex flex-wrap justify-center space-x-2 items-end">
                 <span
                     className="rounded-full text-gray-500 bg-gray-200 font-semibold text-sm flex align-center cursor-pointer active:bg-gray-300 transition duration-300 ease w-max">
-                    <img className="rounded-full w-9 h-9 max-w-none" alt="A"
-                        src="https://mdbootstrap.com/img/Photos/Avatars/avatar-6.jpg" />
+                    <Image className="rounded-full w-9 h-9 max-w-none" alt="A"
+                        src="https://mdbootstrap.com/img/Photos/Avatars/avatar-6.jpg" width={36} height={36} />
                     <span className="flex items-center px-3 py-2">
                         John Doe
                     </span>
@@ -22,8 +25,8 @@ export default function ChipsPage() {
 
                 <span
                     className="rounded-full text-gray-500 bg-gray-200 font-semibold text-sm flex align-center cursor-pointer active:bg-gray-300 transition duration-300 ease w-max">
-                    <img className="rounded-full w-11 h-11 max-w-none" alt="A"
-                        src="https://mdbootstrap.com/img/Photos/Avatars/avatar-6.jpg" />
+                    <Image className="rounded-full w-11 h-11 max-w-none" alt="A"
+                        src="https://mdbootstrap.com/img/Photos/Avatars/avatar-6.jpg" height={36} width={36} />
                     <span className="flex items-center px-3 py-2">
                         John Doe
                     </span>
@@ -40,8 +43,8 @@ export default function ChipsPage() {
 
                 <span
                     className="mx-4 rounded-full text-gray-500 bg-gray-200 font-semibold text-sm flex align-center cursor-pointer active:bg-gray-300 transition duration-300 ease w-max">
-                    <img className="rounded-full w-14 h-14 max-w-none" alt="A"
-                        src="https://mdbootstrap.com/img/Photos/Avatars/avatar-6.jpg" />
+                    <Image className="rounded-full w-14 h-14 max-w-none" alt="A"
+                        src="https://mdbootstrap.com/img/Photos/Avatars/avatar-6.jpg" height={36} width={36} />
                     <span className="flex items-center px-3 py-2">
                         John Doe
                     </span>
@@ -56,6 +59,6 @@ export default function ChipsPage() {
                     </button>
                 </span>
             </div>
-        </div>
+        </Layout>
     )
 }

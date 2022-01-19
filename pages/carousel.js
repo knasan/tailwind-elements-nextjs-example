@@ -1,6 +1,9 @@
+import Layout from "../components/Layout"
+import Image from "next/image"
+
 export default function CarouselPage() {
     return (
-        <div>
+        <Layout>
             <div id="carouselExampleCaptions" className="carousel slide relative" data-bs-ride="carousel">
                 <div className="carousel-indicators absolute right-0 bottom-0 left-0 flex justify-center p-0 mb-4">
                     <button
@@ -26,10 +29,10 @@ export default function CarouselPage() {
                 </div>
                 <div className="carousel-inner relative w-full overflow-hidden">
                     <div className="carousel-item active relative float-left w-full">
-                        <img
+                        <Image
                             src="https://mdbootstrap.com/img/Photos/Slides/img%20(15).jpg"
                             className="block w-full"
-                            alt="..."
+                            alt="..." width={1500} height={423}
                         />
                         <div className="carousel-caption hidden md:block absolute text-center">
                             <h5 className="text-xl">First slide label</h5>
@@ -37,10 +40,10 @@ export default function CarouselPage() {
                         </div>
                     </div>
                     <div className="carousel-item relative float-left w-full">
-                        <img
+                        <Image
                             src="https://mdbootstrap.com/img/Photos/Slides/img%20(22).jpg"
                             className="block w-full"
-                            alt="..."
+                            alt="..." width={1500} height={423}
                         />
                         <div className="carousel-caption hidden md:block absolute text-center">
                             <h5 className="text-xl">Second slide label</h5>
@@ -48,10 +51,10 @@ export default function CarouselPage() {
                         </div>
                     </div>
                     <div className="carousel-item relative float-left w-full">
-                        <img
+                        <Image
                             src="https://mdbootstrap.com/img/Photos/Slides/img%20(23).jpg"
                             className="block w-full"
-                            alt="..."
+                            alt="..." width={1500} height={423}
                         />
                         <div className="carousel-caption hidden md:block absolute text-center">
                             <h5 className="text-xl">Third slide label</h5>
@@ -78,6 +81,6 @@ export default function CarouselPage() {
                     <span className="visually-hidden">Next</span>
                 </button>
             </div>
-        </div>
+        </Layout>
     )
 }
